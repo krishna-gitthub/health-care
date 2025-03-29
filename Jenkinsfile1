@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    
+    stages {
         stage('Checkout') {
             steps {
                 echo "checked out"
@@ -49,7 +51,9 @@ pipeline {
         }
 
         stage('Deploy to Production') {
-            echo "deployed the production phase"
+            steps { // Added the "steps" block here
+                echo "deployed the production phase"
+            }
         }
 
         stage('Setup Monitoring') {
@@ -58,3 +62,4 @@ pipeline {
             }
         }
     }
+}
