@@ -1,12 +1,5 @@
 pipeline {
     agent any
-
-    tools {
-        maven 'Apache Maven 3.8.7'
-        jdk 'openjdk 17.0.14'
-    }
-
-
         stage('Checkout') {
             steps {
                 echo "checked out"
